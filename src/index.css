@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.slick-track {
+  display: flex !important;
+  gap: 2.5rem;
+  align-items: center;
+  /* Apply flex display to the track */
+}
+
+.slick-slide {
+  opacity: 0.3;
+}
+
+.slider-container{
+  overflow: hidden;
+}
+
+.game-slide .slick-slide {
+  opacity: 1;
+}
+
+.game-slide .slick-track  {
+  display: flex !important;
+  gap: 1rem;
+  align-items: center;
+}
+
+.slick-center {
+  opacity: 1;
+}
+
+.slick-center .slide-container {
+  height: 423px;
+  width: 100%;
+  /* Height for the center slide */
+  transition: height 0.3s ease-in-out;
+  /* Smooth height transition */
+}
+
+.slick-slide:not(.slick-center) .slide-container {
+  height: 389px;
+  /* Smaller height for non-center slides */
+  transition: height 0.3s ease-in-out;
+  /* Smooth height transition */
+}
+
+/* Optional: You can adjust the width of the slides if needed */
+.slick-slide {
+  width: auto !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .slick-list {
+    overflow: inherit !important;  
+  }
+  .slick-slide {
+    opacity: 1;
+  }
+  .slick-track {
+    gap: 0;
+  }
+  .main-slide .slide-container {
+    width: 90% !important;
+  }
+  
+}
