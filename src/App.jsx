@@ -3,7 +3,7 @@ import AppRoutes from './routes';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/NevelTech-Test">
       <AppRoutes />
     </Router>
   );
